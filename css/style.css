@@ -8,30 +8,70 @@
   --font-primary: 'Poppins', sans-serif;
   --font-secondary: 'Arvo', serif;
   --font-code: 'Roboto', monospace;
-  --bg-color: #0D0D0D;
+  --bg-color: #000000;
   --font-color: #ffffff;
-  --btn-bg-color: #262626;
-  --accent-color: #F2C0A2;
-  --header-shadow: #F2C0A2 0px 0px 5px;
+  --btn-bg-color: #000000;
+  --accent-color: #ffffff;
+  --header-shadow: rgb(255, 255, 255) 0px 0px 5px;
 }
-a {
-color: #ffffff;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+a{
+font-size: 30px;
+font-weight: 400;
+color:white;
+margin-top: 1rem;
+text-decoration: none;
 }
 
 * {
-  padding: 0;
-  margin: 0;
+  padding:0px;
+  margin: 0px;
   box-sizing: border-box;
 }
 
-body {
-  background-color: var(--bg-color);
-  display: flex;
-  flex-flow: column;
-  height: 100vh;
+body, html{
+  font-size: 16px;
+  line-height: 1.8em;
+  height: 100%;
+  margin: 0;
+  font-weight: 400;
   color: var(--font-color);
+  background-color: #000;
   font-family: var(--font-primary);
+}
+
+.sect1, .sect2, .sect3{
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.sect1{
+background-image: url("../images/x-icon/img1.jpg");
+min-height: 100%;
+}
+
+.sect2{
+  background-image: url("../images/x-icon/img4.jpg");
+  min-height: 100%;
+}
+
+.sect3{
+  background-color: #000;
+  min-height: 200%;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-size: 60px;
+  font-weight: 800;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
 }
 
 .container {
@@ -39,26 +79,42 @@ body {
   flex-direction: column;
   max-width: 960px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  margin-bottom: 0;
+}
+
+.q1, .q2, .q3{
+font-size: 30px;
+padding: 2rem;
+}
+.intro{
+  background-color:#000000;
+  padding: 2rem;
+  border-radius: 4rem;
+  margin: 1rem;
+  opacity: 85%;
+}
+.roadmap{
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: 0;
+}
+.roadtxt{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  gap: 5rem;
+  padding-left: 3rem;
 }
 
 /* HEADER */
-
-header {
-  box-shadow: var(--header-shadow);
-}
-
-header .container {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .menu {
   display:flex;
-  justify-content: center;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  gap: 3rem;
+  margin: 2px;
 }
 
 /* BUTTONS */
@@ -68,27 +124,26 @@ header .container {
   padding: 1rem 2rem;
   background: var(--btn-bg-color);
   color: var(--accent-color);
-  font-family: var(--font-secondary);
-  font-style: italic;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 1rem;
   text-transform: capitalize;
   transition: all 0.3s ease;
   box-shadow: 1px 1px 0 0 var(--accent-color);
   cursor: pointer;
   position: relative;
-  text-decoration: none;
   outline: none;
 }
+
 .btn:hover {
   box-shadow: none;
 }
 
 .wallet-btn {
-  border-radius: 5rem;
-  margin-left: auto;
-  margin-bottom: 2rem;
-  border-color: transparent;
+  font-family: ;
+  display: flex;
+  justify-content:right;
+  border-radius: 1rem;
+  border-color:#ffffff;
 }
 
 .hero-btn {
@@ -96,13 +151,6 @@ header .container {
   font-size: 1.2rem;
   padding: 1.5rem 3rem;
 }
-
-/* COUNTDOWN SECTION */
-
-section {
-  flex: 1 1 auto;
-}
-
 
 /* OWNER STYLES */
 
@@ -122,11 +170,3 @@ section {
     padding: 1rem;
     max-width: 8rem;
   }
-  .countdown h1 {
-    font-size: 2rem;
-  }
-  .countdown p {
-    font-size: 1rem;
-  }
-}
- 
